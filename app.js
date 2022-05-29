@@ -8,6 +8,7 @@ const roomsRoutes = require("./src/routes/rooms")
 const { on } = require('nodemon')
 const errorHandler = require('./src/middleware/errorHandler')
 const cookieParser = require('cookie-parser')
+const cors = require('cors')
 
 
 const app = express()
@@ -35,6 +36,8 @@ mongoose.connection.on('connected', () => {
 
 // Middleware
 app.use(cookieParser())
+app.use(cors())
+
 
 
 app.use(express.json())
@@ -44,6 +47,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', usersRoutes);
 app.use('/api/hotels', hotelRoutes);
 app.use('/api/rooms', roomsRoutes);
+
+// Don't forget to use Hooks for querying
+// Use react proxy or cors middleware
 
 app.use(errorHandler)
 

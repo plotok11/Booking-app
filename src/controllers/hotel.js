@@ -74,7 +74,51 @@ module.exports = {
         catch(err){
             next(err)
         }
-    }
+    },
 
+    countByCity: async(req, res, next) => {
+        const namaKota = req.query.namaKota.split(",")
+
+        try{
+            const list = await  Promise.all(namaKota.map(kota=>{
+                // return Hotel.find({kota:kota}).length
+                return Hotel.countDocuments({kota:kota})
+            }))
+            res.status(200).json({
+                status:"success",
+                message:"Sucessfully retrieved!!",
+                data: list
+            })
+        }
+        catch(err){
+            next(err)
+        }
+    },
+
+    // Jika ada type
+    countByType: async(req, res, next) => {
+        try{
+            const hotelCount = await Hotel.countDocuments({tipe: "hotel"})
+            const apartementCount = await Hotel.countDocuments({tipe: "apartement"})
+            const resortCount = await Hotel.countDocuments({tipe: "resort"})
+            const villaCount = await Hotel.countDocuments({tipe: "villa"})
+            const cabinCount = await Hotel.countDocuments({tipe: "cabin"})
+            res.status(200).json({
+                status:"success",
+                message:"Sucessfully retrieved!!",
+                data: [
+                    {type: "hotel", count: hotelCount},
+                    {type: "apartement", count: apartementCount},
+                    {type: "resort", count: resortCount},
+                    {type: "villa", count: villaCount},
+                    {type: "cabin", count: cabinCount},
+                ]
+                
+            })
+        }
+        catch(err){
+            next(err)
+        }
+},
 
 }

@@ -1,5 +1,5 @@
 const express = require("express");
-const { createHotel, getHotelById, getAllHotel, updateHotelById, deleteHotelById } = require("../controllers/hotel");
+const { createHotel, getHotelById, getAllHotel, updateHotelById, deleteHotelById, countByCity, countByType } = require("../controllers/hotel");
 const { verifyToken, verifyUser, verifyAdmin } = require('../middleware/verifyToken')
 // const dataController = require("../controllers/hotel-data-controller");
 
@@ -15,10 +15,14 @@ router.put('/:id', verifyAdmin, updateHotelById)
 router.delete('/:id', verifyAdmin, deleteHotelById)
 
 // GET BY ID
-router.get('/:id', getHotelById)
+router.get('/find/:id', getHotelById)
 
 // GET ALL
 router.get('/', getAllHotel)
+
+// Querying
+router.get('/countByCity', countByCity) // Menghitung jumlah hotel dari suatu kota
+router.get('/countByType', countByType) // Jika ada TIPE Hotel
 
 // router.get("/", dataController.getAllHotels);
 // router.get("/:id", dataController.getHotelById);
