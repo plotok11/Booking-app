@@ -1,0 +1,1324 @@
+{
+	"info": {
+		"_postman_id": "6709706b-d93f-4ed1-b509-e8f6414ecda9",
+		"name": "API Test Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hotel API",
+			"item": [
+				{
+					"name": "CREATE HOTEL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"namaHotel\": \"The Trans Luxury Hotel\",\r\n    \"rating\": \"4.7\",\r\n    \"kota\": \"Bandung\",\r\n    \"priceRange\": \"Rp 199.999 - Rp 594.285\",\r\n    \"description\":\r\n      \"Across the street from the Trans Studio Mall Bandung, this polished hotel is 2 km from Cikudapateuh train station and 4 km from dining and shopping along lively Braga Street.\",\r\n    \"latitude\": -6.2,\r\n    \"longitude\": 106.816666,\r\n    \"imageUrl\": \"https://source.unsplash.com/random/900×700/?hotel\",\r\n    \"cheapestPrice\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/hotels/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hotels",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREATE HOTEL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"namaHotel\": \"The Trans Luxury Hotel\",\r\n    \"rating\": \"4.7\",\r\n    \"kota\": \"Bandung\",\r\n    \"priceRange\": \"Rp 199.999 - Rp 594.285\",\r\n    \"description\":\r\n      \"Across the street from the Trans Studio Mall Bandung, this polished hotel is 2 km from Cikudapateuh train station and 4 km from dining and shopping along lively Braga Street.\",\r\n    \"latitude\": -6.2,\r\n    \"longitude\": 106.816666,\r\n    \"imageUrl\": \"https://source.unsplash.com/random/900×700/?hotel\",\r\n    \"cheapestPrice\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/hotels/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"hotels",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "551"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"227-nu334zPeUOFXX5reKnJUz/xeCSM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 15:27:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully added!!\",\n    \"data\": {\n        \"namaHotel\": \"The Trans Luxury Hotel\",\n        \"rating\": 4.7,\n        \"kota\": \"Bandung\",\n        \"priceRange\": \"Rp 199.999 - Rp 594.285\",\n        \"description\": \"Across the street from the Trans Studio Mall Bandung, this polished hotel is 2 km from Cikudapateuh train station and 4 km from dining and shopping along lively Braga Street.\",\n        \"latitude\": -6.2,\n        \"longitude\": 106.816666,\n        \"imageUrl\": \"https://source.unsplash.com/random/900×700/?hotel\",\n        \"rooms\": [],\n        \"cheapestPrice\": 100,\n        \"featured\": false,\n        \"_id\": \"6290ede981c6c6270d811faf\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE HOTEL BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"namaHotel\": \"Hotel Tentrem Update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/hotels/628e5d2a83f243f1d776a09a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hotels",
+								"628e5d2a83f243f1d776a09a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE HOTEL by ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"namaHotel\": \"Hotel Indonesia Kempinski\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/hotels/628dfe564a78d38ad9c1b90d",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"hotels",
+										"628dfe564a78d38ad9c1b90d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "531"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"213-tSx8BupfJ+p0e5b4Zwhke2nGXsU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 15:29:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Sucessfully updated!!\",\n    \"data\": {\n        \"_id\": \"628dfe564a78d38ad9c1b90d\",\n        \"namaHotel\": \"Hotel Indonesia Kempinski\",\n        \"rating\": 4.7,\n        \"kota\": \"Jakarta\",\n        \"priceRange\": \"Rp 199.999 - Rp 594.285\",\n        \"description\": \"An 11-minute walk from Sudirman train station, this ritzy hotel is 2.1 km from the National Museum of Indonesia and 4 km from Istiqlal Mosque.\",\n        \"latitude\": -6.2,\n        \"longitude\": 106.816666,\n        \"imageUrl\": \"https://https://source.unsplash.com/random/900×700/?hotel\",\n        \"rooms\": [],\n        \"cheapestPrice\": 100,\n        \"featured\": false,\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "UPDATE HOTEL BY ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"namaHotel\": \"Hotel Tentrem Update\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/hotels/628e5d2a83f243f1d776a09a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"hotels",
+										"628e5d2a83f243f1d776a09a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "534"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"216-vhiWC6BUCHqwpN1XO0GMzfF19XM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 23:07:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Sucessfully updated!!\",\n    \"data\": {\n        \"_id\": \"628e5d2a83f243f1d776a09a\",\n        \"namaHotel\": \"Hotel Tentrem Update\",\n        \"rating\": 4.8,\n        \"kota\": \"Yogyakarta\",\n        \"priceRange\": \"Rp 199.999 - Rp 594.285\",\n        \"description\": \"Among shops and restaurants, this lavish hotel is 2.9 km from the markets on buzzy Jalan Malioboro, and 5 km from Keraton Ngayogyakarta Hadiningrat palace.\",\n        \"latitude\": -6.2,\n        \"longitude\": 106.816666,\n        \"imageUrl\": \"https://source.unsplash.com/random/900×700/?hotel\",\n        \"rooms\": [],\n        \"cheapestPrice\": 100,\n        \"featured\": false,\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET HOTEL BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/hotels/find/628dfe564a78d38ad9c1b90d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hotels",
+								"find",
+								"628dfe564a78d38ad9c1b90d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET HOTEL BY ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/hotels/find/628dfe564a78d38ad9c1b90d",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"hotels",
+										"find",
+										"628dfe564a78d38ad9c1b90d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "559"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22f-ieuAGQmq7F1sKIJ+ypgvwudzQ60\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 18:31:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Sucessfully retrieved!!\",\n    \"data\": {\n        \"_id\": \"628dfe564a78d38ad9c1b90d\",\n        \"namaHotel\": \"Hotel Indonesia Kempinski\",\n        \"rating\": 4.7,\n        \"kota\": \"Jakarta\",\n        \"priceRange\": \"Rp 199.999 - Rp 594.285\",\n        \"description\": \"An 11-minute walk from Sudirman train station, this ritzy hotel is 2.1 km from the National Museum of Indonesia and 4 km from Istiqlal Mosque.\",\n        \"latitude\": -6.2,\n        \"longitude\": 106.816666,\n        \"imageUrl\": \"https://https://source.unsplash.com/random/900×700/?hotel\",\n        \"rooms\": [\n            \"6291d43eecf8feaf75d04792\"\n        ],\n        \"cheapestPrice\": 100,\n        \"featured\": false,\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET ALL HOTELS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/hotels/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hotels",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET ALL HOTELS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/hotels/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"hotels",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1492"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5d4-K4QlU+SsVa40Jlr7cLtjXvIjlVo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 15:29:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Sucessfully retrieved!!\",\n    \"data\": [\n        {\n            \"_id\": \"628dfe564a78d38ad9c1b90d\",\n            \"namaHotel\": \"Hotel Indonesia Kempinski\",\n            \"rating\": 4.7,\n            \"kota\": \"Jakarta\",\n            \"priceRange\": \"Rp 199.999 - Rp 594.285\",\n            \"description\": \"An 11-minute walk from Sudirman train station, this ritzy hotel is 2.1 km from the National Museum of Indonesia and 4 km from Istiqlal Mosque.\",\n            \"latitude\": -6.2,\n            \"longitude\": 106.816666,\n            \"imageUrl\": \"https://https://source.unsplash.com/random/900×700/?hotel\",\n            \"rooms\": [],\n            \"cheapestPrice\": 100,\n            \"featured\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"628e5d2a83f243f1d776a09a\",\n            \"namaHotel\": \"Hotel Tentrem\",\n            \"rating\": 4.8,\n            \"kota\": \"Yogyakarta\",\n            \"priceRange\": \"Rp 199.999 - Rp 594.285\",\n            \"description\": \"Among shops and restaurants, this lavish hotel is 2.9 km from the markets on buzzy Jalan Malioboro, and 5 km from Keraton Ngayogyakarta Hadiningrat palace.\",\n            \"latitude\": -6.2,\n            \"longitude\": 106.816666,\n            \"imageUrl\": \"https://source.unsplash.com/random/900×700/?hotel\",\n            \"rooms\": [],\n            \"cheapestPrice\": 100,\n            \"featured\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6290ede981c6c6270d811faf\",\n            \"namaHotel\": \"The Trans Luxury Hotel\",\n            \"rating\": 4.7,\n            \"kota\": \"Bandung\",\n            \"priceRange\": \"Rp 199.999 - Rp 594.285\",\n            \"description\": \"Across the street from the Trans Studio Mall Bandung, this polished hotel is 2 km from Cikudapateuh train station and 4 km from dining and shopping along lively Braga Street.\",\n            \"latitude\": -6.2,\n            \"longitude\": 106.816666,\n            \"imageUrl\": \"https://source.unsplash.com/random/900×700/?hotel\",\n            \"rooms\": [],\n            \"cheapestPrice\": 100,\n            \"featured\": false,\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE HOTEL BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/hotels/628e079d6c47276d63a50253",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hotels",
+								"628e079d6c47276d63a50253"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User API",
+			"item": [
+				{
+					"name": "REGIST USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user2\",\r\n    \"email\": \"user2@gmail.com\",\r\n    \"password\": \"user2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "REGIST USER",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"user2\",\r\n    \"email\": \"user2@gmail.com\",\r\n    \"password\": \"user2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "317"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13d-ADl7YLfLzrvt+J6x4NGNDkAJVsM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 16:07:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User has been created\",\n    \"data\": {\n        \"username\": \"user2\",\n        \"email\": \"user2@gmail.com\",\n        \"password\": \"$2a$10$UzdfJjAsmJknv6sYBTyPT.WeMfk6e.iXICQ82aYVRWy35LzidpKt6\",\n        \"isAdmin\": false,\n        \"_id\": \"6290f7424a16e0fdcce68edb\",\n        \"createdAt\": \"2022-05-27T16:07:30.470Z\",\n        \"updatedAt\": \"2022-05-27T16:07:30.470Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "LOGIN USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user2\",\r\n    \"password\": \"user2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "LOGIN USER",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"user2\",\r\n    \"password\": \"user2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTBmNzQyNGExNmUwZmRjY2U2OGVkYiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NTM2NzgzMzV9.EeAm5GXgskvX6gcuAbxxBsxeYyaHvq-_l3OsAPTdeX8; Path=/; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c1-292m0QgVyqZJ9lX0HBnwH5f56vE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 19:05:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"details\": {\n        \"_id\": \"6290f7424a16e0fdcce68edb\",\n        \"username\": \"user2\",\n        \"email\": \"user2@gmail.com\",\n        \"createdAt\": \"2022-05-27T16:07:30.470Z\",\n        \"updatedAt\": \"2022-05-27T16:07:30.470Z\",\n        \"__v\": 0\n    },\n    \"isAdmin\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "CHECK TOKEN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/checkAuth",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"checkAuth"
+							]
+						},
+						"description": "Enable code in user controller, and login first to check the auth"
+					},
+					"response": [
+						{
+							"name": "CHECK TOKEN",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/users/checkAuth",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"checkAuth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-gHaV2ADSB+GH1RVwu41YerUaXW8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 22:39:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Hello user you are authenticated"
+						}
+					]
+				},
+				{
+					"name": "CHECK IS USER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/checkUser/6290f7424a16e0fdcce68edb",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"checkUser",
+								"6290f7424a16e0fdcce68edb"
+							]
+						},
+						"description": "Enable the code in user controller, and login first to check is valid user"
+					},
+					"response": [
+						{
+							"name": "CHECK IS USER",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/users/checkUser/6290f7424a16e0fdcce68edb",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"checkUser",
+										"6290f7424a16e0fdcce68edb"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-GKBxdUAfC5nnFpU0Ev9ayP4QcFY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 22:54:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Hello user you are logged in, you can update and delete your user"
+						}
+					]
+				},
+				{
+					"name": "CHCEK IS ADMIN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/checkAdmin/6290f7424a16e0fdcce68edb",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"checkAdmin",
+								"6290f7424a16e0fdcce68edb"
+							]
+						},
+						"description": "Enable the code in user controller, and login first to check is valid admin... check in database isAdmin need to be true"
+					},
+					"response": [
+						{
+							"name": "CHCEK IS ADMIN",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/users/checkAdmin/6290f7424a16e0fdcce68edb",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"checkAdmin",
+										"6290f7424a16e0fdcce68edb"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1448"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5a8-dNZ7IcfnzsXCrBI6+QEMncJdbys\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 22:54:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"status\": 401,\n    \"message\": \"You are not authorized\",\n    \"stack\": \"Error: You are not authorized\\n    at createError (D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\src\\\\middleware\\\\error.js:5:19)\\n    at verifyAdmin (D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\src\\\\middleware\\\\verifyToken.js:66:25)\\n    at Layer.handle [as handle_request] (D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:144:13)\\n    at Route.dispatch (D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:114:3)\\n    at Layer.handle [as handle_request] (D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:284:15\\n    at param (D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:365:14)\\n    at param (D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:376:14)\\n    at Function.process_params (D:\\\\Bangkit\\\\Capstone Project\\\\Case 4 Traveloka\\\\BOOKING-API\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:421:3)\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Room API",
+			"item": [
+				{
+					"name": "ADD ROOM IN HOTEL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"King Room\",\r\n    \"description\":\"King size Bed, 2 Bathroom\",\r\n    \"maxPeople\": 2,\r\n    \"price\": 50,\r\n    \"roomNumbers\": [{\"number\": 101}, {\"number\":102 }]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/rooms/628dfe564a78d38ad9c1b90d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								"628dfe564a78d38ad9c1b90d"
+							]
+						},
+						"description": "/api/rooms/{{hotelId}}"
+					},
+					"response": [
+						{
+							"name": "ADD ROOM IN HOTEL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"King Room\",\r\n    \"description\":\"King size Bed, 2 Bathroom\",\r\n    \"maxPeople\": 2,\r\n    \"price\": 50,\r\n    \"roomNumbers\": [{\"number\": 101}, {\"number\":102 }]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/rooms/628dfe564a78d38ad9c1b90d",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"rooms",
+										"628dfe564a78d38ad9c1b90d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "363"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16b-Cksyk5uE33PcwxDcWfo8FYu31Dw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 May 2022 07:33:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"King Room\",\n    \"price\": 50,\n    \"maxPeople\": 2,\n    \"description\": \"King size Bed, 2 Bathroom\",\n    \"roomNumbers\": [\n        {\n            \"number\": 101,\n            \"unavailableDates\": [],\n            \"_id\": \"6291d0581103da40b7cb2497\"\n        },\n        {\n            \"number\": 102,\n            \"unavailableDates\": [],\n            \"_id\": \"6291d0581103da40b7cb2498\"\n        }\n    ],\n    \"_id\": \"6291d0581103da40b7cb2496\",\n    \"createdAt\": \"2022-05-28T07:33:44.869Z\",\n    \"updatedAt\": \"2022-05-28T07:33:44.869Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE ROOM and UPDATE HOTEL ROOM DATA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/rooms/6291d0581103da40b7cb2496/628dfe564a78d38ad9c1b90d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								"6291d0581103da40b7cb2496",
+								"628dfe564a78d38ad9c1b90d"
+							]
+						},
+						"description": "/api/rooms/{{roomId}}/{{hotelId}}"
+					},
+					"response": [
+						{
+							"name": "DELETE ROOM and UPDATE HOTEL ROOM DATA",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/rooms/6291d0581103da40b7cb2496/628dfe564a78d38ad9c1b90d",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"rooms",
+										"6291d0581103da40b7cb2496",
+										"628dfe564a78d38ad9c1b90d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-4gK6bQDnZZY1CwPaafiRpZYEXDg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 May 2022 07:46:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Sucessfully deleted!!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET ROOM NUMBER by ROOM ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/rooms/6291d43eecf8feaf75d04792",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								"6291d43eecf8feaf75d04792"
+							]
+						},
+						"description": "/api/rooms/{{roomId}}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Query",
+			"item": [
+				{
+					"name": "COUNT BY CITY",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/hotels/countByCity?namaKota=Jakarta,Yogyakarta,Bandung",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hotels",
+								"countByCity"
+							],
+							"query": [
+								{
+									"key": "namaKota",
+									"value": "Jakarta,Yogyakarta,Bandung"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "COUNT BY CITY",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/hotels/countByCity?namaKota=Jakarta,Yogyakarta,Bandung",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"hotels",
+										"countByCity"
+									],
+									"query": [
+										{
+											"key": "namaKota",
+											"value": "Jakarta,Yogyakarta,Bandung"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47-qPjokXr0X0UIJKRuyEy934sB8DA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 17:54:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Sucessfully retrieved!!\",\n    \"data\": [\n        1,\n        1,\n        1\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "COUNT BY TYPE HOTEL (JIKA ADA)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/hotels/countByType",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hotels",
+								"countByType"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "COUNT BY TYPE HOTEL (JIKA ADA)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/hotels/countByType",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"hotels",
+										"countByType"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "206"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ce-0ey66X31mfls4tFp7dpvnhc9228\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 18:46:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Sucessfully retrieved!!\",\n    \"data\": [\n        {\n            \"type\": \"hotel\",\n            \"count\": 2\n        },\n        {\n            \"type\": \"apartement\",\n            \"count\": 0\n        },\n        {\n            \"type\": \"resort\",\n            \"count\": 0\n        },\n        {\n            \"type\": \"villa\",\n            \"count\": 1\n        },\n        {\n            \"type\": \"cabin\",\n            \"count\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GET FEATURED HOTEL and LIMIT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/hotels?featured=true",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "featured",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET FEATURED HOTEL and LIMIT",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/hotels?featured=true",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"hotels"
+									],
+									"query": [
+										{
+											"key": "featured",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "545"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"221-HRH9JYZwTI4mR2YGn5GZQRl1fu0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 May 2022 06:40:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Sucessfully retrieved!!\",\n    \"data\": [\n        {\n            \"_id\": \"628e5d2a83f243f1d776a09a\",\n            \"namaHotel\": \"Hotel Tentrem\",\n            \"rating\": 4.8,\n            \"kota\": \"Yogyakarta\",\n            \"priceRange\": \"Rp 199.999 - Rp 594.285\",\n            \"description\": \"Among shops and restaurants, this lavish hotel is 2.9 km from the markets on buzzy Jalan Malioboro, and 5 km from Keraton Ngayogyakarta Hadiningrat palace.\",\n            \"latitude\": -6.2,\n            \"longitude\": 106.816666,\n            \"imageUrl\": \"https://source.unsplash.com/random/900×700/?hotel\",\n            \"rooms\": [],\n            \"cheapestPrice\": 100,\n            \"featured\": true,\n            \"__v\": 0,\n            \"tipe\": \"hotel\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
